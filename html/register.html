@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이마스터</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+    
+    <div class="register_title">
+        <h1>페이마스터 회원가입</h1>
+    </div>
+
+    <div class="info">
+        <form id="register_form" method="post" action="/register">
+            <!-- 아이디 -->
+            <div class="register_con">
+                <div class="con">
+                    <input type="text" placeholder="아이디" name="user_id" id="user_id">
+                    <button id="check_id">중복확인</button>
+                </div>
+            </div>
+            
+            <!-- 비밀번호 -->
+            <div class="register_con">
+                <div class="con">
+                    <input type="password" placeholder="비밀번호" name="user_pw" id="user_pw">
+                </div>
+            </div>
+
+            <!-- 비밀번호 확인 -->
+            <div class="register_con">
+                <div class="con">
+                    <input type="password" placeholder="비밀번호 확인" name="user_pw_check" id="user_pw_check">
+                    <span>비밀번호를 입력해주세요</span>
+                </div>
+            </div>
+
+            <!-- 이름 -->
+            <div class="register_con">
+                <div class="con">
+                    <input type="text" placeholder="이름" name="user_name" id="user_name">
+                </div>
+            </div>
+
+            <!-- 이메일 -->
+            <div class="register_con">
+                <div class="con">
+                    <input type="text" id="email_txt" placeholder="이메일">@
+                    <input type="email" id="email" name="user_email">
+                    <select id="email_list">
+                        <option value="type">직접 입력</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="hanmail.com">hanmail.com</option>
+                        <option value="nate.com">nate.com</option>
+                        <option value="kakao.com">kakao.com</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 가입하기 버튼 -->
+            <div class="register_btn">
+                <input type="submit" value="가입하기" class="btn" id="register_submit">
+                <input type="reset" value="취소" class="btn">
+            </div>
+
+        </form>
+    </div>
+
+
+    <script>
+        // 이메일 직접 입력 or 이메일 option 선택
+        const emailListEl = document.querySelector('#email_list')
+        const emailInputEl = document.querySelector('#email')
+
+        // select 옵션 변경 시
+        emailListEl.addEventListener('change', (event) => {
+            // option에 있는 도메인 선택 시
+            if(event.target.value !== "type") {
+                // 선택한 도메인을 input에 입력하고 disabled
+                emailInputEl.value = event.target.value
+                emailInputEl.disabled = true
+            } else {
+                // 직접 입력 시 
+                // input 내용 초기화 & 입력 가능하도록 변경
+                emailInputEl.value = ""
+                emailInputEl.disabled = false
+            }
+        })
+
+    </script>
+
+
+</body>
+</html>

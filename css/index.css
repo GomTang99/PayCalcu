@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+/* reset */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/bg.jpg) no-repeat center / cover;
+}
+
+.wrap{
+    width: 100%;
+    height: 920px; 
+}
+
+.in_header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.in_header > h1 {
+    font-size: 80px;
+}
+
+.btn_wrap{
+    width: 100%;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+
+  .register {
+    background: rgb(0,172,238);
+  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    
+  }
+  .register span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .register:before,
+  .register:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+     background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  .register:before {
+    height: 0%;
+    width: 2px;
+  }
+  .register:after {
+    width: 0%;
+    height: 2px;
+  }
+  .register:hover{
+     background: transparent;
+    box-shadow: none;
+  }
+  .register:hover:before {
+    height: 100%;
+  }
+  .register:hover:after {
+    width: 100%;
+  }
+  .register span:hover{
+     color: rgba(2,126,251,1);
+  }
+  .register span:before,
+  .register span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+     background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  .register span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .register span:after {
+    width: 0%;
+    height: 2px;
+  }
+  .register span:hover:before {
+    height: 100%;
+  }
+  .register span:hover:after {
+    width: 100%;
+  }
+
+  /* register 버튼 스타일 */
+
+  .login {
+    background: rgb(0,172,238);
+  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    
+  }
+  .login span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .login:before,
+  .login:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+     background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  .login:before {
+    height: 0%;
+    width: 2px;
+  }
+  .login:after {
+    width: 0%;
+    height: 2px;
+  }
+  .login:hover{
+     background: transparent;
+    box-shadow: none;
+  }
+  .login:hover:before {
+    height: 100%;
+  }
+  .login:hover:after {
+    width: 100%;
+  }
+  .login span:hover{
+     color: rgba(2,126,251,1);
+  }
+  .login span:before,
+  .login span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+     background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  .login span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .login span:after {
+    width: 0%;
+    height: 2px;
+  }
+  .login span:hover:before {
+    height: 100%;
+  }
+  .login span:hover:after {
+    width: 100%;
+  }
+
+/* login 버튼 스타일 */
+
+.register {
+    width: 10%;
+    height: 50px;
+    display: inline-block;
+}
+
+.login {
+    width: 10%;
+    height: 50px;
+}
+
+
